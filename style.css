@@ -1,0 +1,20 @@
+body {
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 600px;
+}
+
+.single-image {
+    height: 705px;
+    width: auto;
+    margin-left: 25px;
+    border: 7px solid yellow;
+    border-radius: 10px;
+}
