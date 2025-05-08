@@ -3,6 +3,7 @@ body {
     color: #fff;
     overflow: hidden;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -14,7 +15,28 @@ body {
 .single-image {
     height: 705px;
     width: auto;
-    margin-left: 25px;
+    margin-left: 10px;
     border: 7px solid yellow;
     border-radius: 10px;
+}
+
+.title {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .single-image {
+        width: 90vw;
+        height: auto;
+    }
+
+    .title {
+        display: block;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 28px;
+    }
 }
