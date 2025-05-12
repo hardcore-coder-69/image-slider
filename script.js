@@ -44,6 +44,9 @@
 //     '1(36).png',
 //     '1(37).png',
 
+
+
+const bg = '';
 const imageArray = [
     '1.png',
     '1(1).png',
@@ -66,25 +69,36 @@ const imageArray = [
     '1(18).png',
     '1(19).png',
 ];
+const time = '360s';
+
+
+
 
 start();
 async function start() {
     const containerEl = document.getElementById('container');
+
+    if(bg) {
+        const bgImage = document.getElementById('bg-image');
+        bgImage.setAttribute('src', `./images/${bg}`);
+        bgImage.style.display = 'block';
+    }
+    
     let imageUI = '';
     imageArray.forEach(image => {
         let singleImage = `
-            <img src='./images/${image}' class='single-image' />
+            <img src='./images/${image}' class='single-image shadow' />
         `;
         imageUI += singleImage;
     })
     containerEl.innerHTML = imageUI;
-    await sleep(1000);
+    await sleep(2000);
     animate();
 }
 
 function animate() {
     const containerEl = document.getElementById('container');
-    containerEl.style.transition = 'all 360s linear';
+    containerEl.style.transition = `all ${time} linear`;
     containerEl.style.transform = `translateX(-${1000 * imageArray.length}px)`;
 }
 
