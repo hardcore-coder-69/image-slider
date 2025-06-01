@@ -3,7 +3,9 @@ body {
     color: #fff;
     overflow: hidden;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Lilita One", sans-serif;
+    /* font-family: "Archivo Black", sans-serif; */
+    /* font-family: "Rowdies", sans-serif; */
 }
 
 .container {
@@ -11,16 +13,80 @@ body {
     z-index: 2;
     display: flex;
     align-items: center;
-    margin-left: 600px;
+    /* margin-left: 1200px; */
     /* margin-top: 5px; */
 }
 
 .single-image {
     height: 705px;
     width: auto;
-    margin-left: 20px;
+    margin-left: 5px;
     border: 7px solid yellow;
-    border-radius: 10px;
+    border-radius: 80px;
+}
+
+.image-animate {
+    animation: spin 2s linear;
+}
+
+.image-animate-1 {
+    animation: slideInFromBottom 3s forwards;
+    animation-delay: 0s;
+}
+
+.image-animate-2 {
+    animation: slideInFromTop 3s forwards;
+    transform: translateY(-1000px);
+    animation-delay: 4s;
+}
+
+.image-animate-3 {
+    animation: slideInFromBottom 3s forwards;
+    transform: translateY(1000px);
+    animation-delay: 8s;
+}
+
+.image-animate-4 {
+    animation: slideInFromTop 3s forwards;
+    transform: translateY(-1000px);
+    animation-delay: 12s;
+}
+
+.image-animate-5 {
+    animation: slideInFromBottom 3s forwards;
+    transform: translateY(1000px);
+    animation-delay: 16s;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(1000px) rotate(0deg);
+  }
+  to {
+    transform: translate(0%) rotate(-360deg);
+  }
+}
+
+.hide {
+    display: none;
 }
 
 /* .shadow {
@@ -32,12 +98,46 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    /* height: 100vh; */
+    width: 100vw;
+    height: auto;
     display: none;
 }
 
 .title {
     display: none;
+}
+
+.full-screen-text-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all 0.2s ease-out;
+    padding: 20px;
+}
+
+.full-screen-text {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s ease-out;
+    /* animation: blink 1s infinite; */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 600px) {
