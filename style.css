@@ -112,7 +112,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     transition: all 0.2s ease-out;
     padding: 20px;
 }
