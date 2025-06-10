@@ -3,9 +3,8 @@ body {
     color: #fff;
     overflow: hidden;
     margin: 0;
-    font-family: "Lilita One", sans-serif;
-    /* font-family: "Archivo Black", sans-serif; */
-    /* font-family: "Rowdies", sans-serif; */
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
 }
 
 .container {
@@ -15,14 +14,6 @@ body {
     align-items: center;
     /* margin-left: 1200px; */
     /* margin-top: 5px; */
-}
-
-.single-image {
-    height: 705px;
-    width: auto;
-    margin-left: 5px;
-    border: 7px solid yellow;
-    border-radius: 80px;
 }
 
 .image-animate {
@@ -155,4 +146,18 @@ body {
         padding-right: 20px;
         font-size: 28px;
     }
+}
+
+.single-image {
+    height: 705px;
+    width: auto;
+    margin-left: 5px;
+    border: 7px solid rgb(21, 255, 0);
+    border-radius: 30px;
+    filter: brightness(1.2) contrast(1.1) saturate(1.5) sepia(0.25) hue-rotate(-10deg) blur(0);
+    transition: filter .5s ease;
+}
+
+.single-image.viewport-effect {
+    filter: brightness(1.2) contrast(1.1) saturate(1.5) sepia(0.25) hue-rotate(-10deg) blur(0) grayscale(1);
 }
