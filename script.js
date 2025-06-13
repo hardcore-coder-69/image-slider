@@ -122,7 +122,10 @@ function positionObserver() {
     setInterval(() => {
         images.forEach(image => {
             let rect = image.getBoundingClientRect();
-            if(window.innerWidth - rect.width >= rect.x && !image.classList.contains('viewport-effect')) {
+            // if(window.innerWidth - rect.width >= rect.x && !image.classList.contains('viewport-effect')) {
+            //     image.classList.add('viewport-effect');
+            // }
+            if(rect.x < 0 && !image.classList.contains('viewport-effect')) {
                 image.classList.add('viewport-effect');
             }
         })
